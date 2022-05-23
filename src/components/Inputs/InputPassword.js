@@ -1,8 +1,10 @@
 const InputPassword = () => {
   return (
-    <div>
+    <section>
       <label htmlFor="password">Senha</label>
       <input type="text" id="password" />
-    </div>
+    </section>
   );
-}
+};
+
+export default InputPassword;

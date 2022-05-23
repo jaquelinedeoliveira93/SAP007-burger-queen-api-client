@@ -1,8 +1,10 @@
 const InputName = () => {
   return (
-    <div>
+    <section>
       <label htmlFor="name">Nome</label>
       <input type="text" id="name" />
-    </div>
+    </section>
   );
-}
+};
+
+export default InputName;
