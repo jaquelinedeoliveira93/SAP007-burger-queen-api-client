@@ -1,0 +1,13 @@
+.buttonLogin {
+  width: 178px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #FDAC3D;
+  color: #550101;
+  font-weight: bold;
+  border: none;
+}
+
+.buttonHall {
+  margin-right: 10px;
+}

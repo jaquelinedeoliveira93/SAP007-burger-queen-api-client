@@ -1,0 +1,36 @@
+.title, .subtitle {
+  text-align: center;
+  color: #FDAC3D;
+}
+
+.title {
+  margin-top: 30px;
+}
+
+.subtitle {
+  margin-top: 30px;
+  font-size: 13px;
+}
+
+.containerForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sectionForm {
+  background-color: #550101;
+  width: 504px;
+  height: 536px;
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sectionButtons {
+  display: flex;
+  justify-content: center;
+}
