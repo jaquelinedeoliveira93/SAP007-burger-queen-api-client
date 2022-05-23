@@ -1,9 +1,11 @@
-const ButtonRegister = () => {
+import "./Button.css";
+
+const Button = () => {
   return (
     <section>
-      <button type="submit">ENVIAR</button>
+      <button type="submit" className="buttonSubmit">ENVIAR</button>
     </section>
   );
 };
 
-export default ButtonRegister;
+export default Button;
