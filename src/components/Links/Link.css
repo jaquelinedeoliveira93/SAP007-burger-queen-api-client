@@ -1,0 +1,11 @@
+.navLink {
+  display: flex;
+  justify-content: center;
+}
+.link {
+  text-align: center;
+  color: #FDAC3D;
+  font-size: 13px;
+  text-decoration: none;
+  cursor: pointer;
+}

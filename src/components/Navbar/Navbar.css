@@ -1,0 +1,15 @@
+.navegationBar {
+  background-color: #550101;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.linkNavbar {
+  color: #FDAC3D;
+  font-size: 14px;
+  margin: 15px 10px;
+  text-decoration: none;
+}

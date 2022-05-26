@@ -1,10 +1,15 @@
-.title {
+.title, .subtitle {
   text-align: center;
   color: #FDAC3D;
 }
 
 .title {
   margin-top: 30px;
+}
+
+.subtitle {
+  margin-top: 18px;
+  font-size: 13px;
 }
 
 .containerForm {
