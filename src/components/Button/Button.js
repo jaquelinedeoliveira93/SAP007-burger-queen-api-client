@@ -1,10 +1,10 @@
-import "./Button.css";
+import './Button.css';
 
-const Button = () => {
+export const Button = props => {
   return (
-    <section>
-      <button type="submit" className="buttonSubmit">ENVIAR</button>
-    </section>
+    <button className='buttonSubmit'>
+      {props.title}
+    </button>
   );
 };
 

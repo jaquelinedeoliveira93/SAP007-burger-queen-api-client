@@ -1,9 +1,3 @@
-body {
-  background-image: url("../img/background.jpeg");
-  background-size: cover;
-  background-repeat:no-repeat;
-}
-
 .title, .subtitle {
   text-align: center;
   color: #FDAC3D;
@@ -14,7 +8,7 @@ body {
 }
 
 .subtitle {
-  margin-top: 30px;
+  margin-top: 18px;
   font-size: 13px;
 }
 
