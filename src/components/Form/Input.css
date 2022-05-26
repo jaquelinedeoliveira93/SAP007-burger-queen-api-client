@@ -1,4 +1,4 @@
-.inputForm, .selectWorkplace {
+.inputForm {
   width: 369px;
   height: 40px;
   border-radius: 10px;
@@ -15,22 +15,19 @@
   font-size: 18px;
 }
 
-::-webkit-input-placeholder {
+input::placeholder {
   color: #550101;
   font-size: 13px;
+  padding-left: 3px;
 }
 
-:-moz-placeholder { /* Firefox 18- */
+.selectWorkplace {
+  width: 369px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #FDAC3D;
+  margin-top: 10px;
+  margin-bottom: 20px;
   color: #550101;
-  font-size: 13px;
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-  color: #550101;
-  font-size: 13px;
-}
-
-:-ms-input-placeholder {  
-  color: #550101;
-  font-size: 13px;
 }

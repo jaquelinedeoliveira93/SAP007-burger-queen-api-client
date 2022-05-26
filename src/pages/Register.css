@@ -12,13 +12,6 @@
   font-size: 13px;
 }
 
-.containerForm {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 .sectionForm {
   background-color: #550101;
   width: 504px;
