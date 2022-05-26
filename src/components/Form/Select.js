@@ -1,6 +1,6 @@
-import './SelectWorkplace.css';
+import './Input.css';
 
-const SelectWorkplace = () => {
+const Select = () => {
   return (
     <section>
       <select name='workplace' id='workplace' className='selectWorkplace'>
@@ -12,4 +12,4 @@ const SelectWorkplace = () => {
   );
 };
 
-export default SelectWorkplace;
+export default Select;

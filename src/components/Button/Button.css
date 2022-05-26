@@ -8,3 +8,8 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+.buttonSubmit:hover {
+  background-color: #012842;
+  color: #F29F05;
+}
