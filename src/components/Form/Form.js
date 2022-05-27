@@ -28,8 +28,8 @@ function Form() {
         placeholder='Senha com no mínimo seis caracteres'
       />
       <Select />
-      <Button 
-      title='ENVIAR'
+      <Button
+        text='ENVIAR'
       />
     </form>
   );

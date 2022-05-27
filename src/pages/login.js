@@ -32,7 +32,7 @@ function Login() {
             placeholder='Digite sua senha'
           />
           <Button
-            title="ENTRAR"
+            text="ENTRAR"
           />
         </form>
         <p className='subtitle'>Não possui uma conta?</p>

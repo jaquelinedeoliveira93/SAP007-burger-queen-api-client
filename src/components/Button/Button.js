@@ -1,10 +1,10 @@
 import './Button.css';
 
-export const Button = props => {
+function Button({text}) {
   return (
-    <button className='buttonSubmit'>
-      {props.title}
-    </button>
+    <div>
+      <button className='buttonSubmit'>{text}</button>
+    </div>
   );
 };
 
