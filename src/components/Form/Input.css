@@ -21,6 +21,10 @@ input::placeholder {
   padding-left: 3px;
 }
 
+.containerRadio {
+  margin-top: 6px;
+}
+
 .selectWorkplace {
   width: 369px;
   height: 40px;
