@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // import functions
-import { createUser } from '../services/Auth';
+import { createUser } from '../services/API';
 import { setToken } from '../services/localStorege';
 
 // import components
@@ -43,7 +43,7 @@ export default function Register() {
       })
       .then((data) => {
         setToken(data.token);
-        navigate('/hall');
+        navigate('/');
       })
       .catch((error) => {
       });

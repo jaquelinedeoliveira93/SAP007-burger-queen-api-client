@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 //import functions
 import { setToken } from '../services/localStorege';
-import { loginUser } from '../services/Auth';
+import { loginUser } from '../services/API';
 
 // import components
 import Input from '../components/Form/Input';
@@ -21,7 +21,6 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
@@ -40,7 +39,8 @@ function Login() {
       })
       .then((data) => {
         setToken(data.token);
-        navigate('/hall');
+        console.log(data.token)
+        navigate('/Hall');
       })
       .catch((error) => {
       });
@@ -55,7 +55,7 @@ function Login() {
           name='email'
           placeholder='Digite seu email'
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={e => setEmail(e.target.value)}
         />
         <Input
           type='password'
@@ -63,7 +63,7 @@ function Login() {
           name='password'
           placeholder='Digite sua senha'
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={e => setPassword(e.target.value)}
           autoComplete="on"
         />
         <Message
