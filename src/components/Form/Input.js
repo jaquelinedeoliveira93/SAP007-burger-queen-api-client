@@ -3,8 +3,16 @@ import './Input.css';
 function Input({ type, label, name, placeholder, OnChange, value, ...props }) {
   return (
     <div>
-      <label className='labelForm' htmlFor={name}>{label}</label>
-      <input className='inputForm'
+
+      <label
+        className='labelForm'
+        htmlFor={name}
+      >
+        {label}
+      </label>
+
+      <input
+        className='inputForm'
         type={type}
         name={name}
         id={name}
@@ -13,6 +21,7 @@ function Input({ type, label, name, placeholder, OnChange, value, ...props }) {
         value={value}
         {...props}
       />
+
     </div>
   );
 };

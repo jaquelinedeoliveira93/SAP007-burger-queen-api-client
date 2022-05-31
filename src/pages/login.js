@@ -17,10 +17,10 @@ import LinkToRegister from '../components/Links/LinkToRegister';
 import './index.css';
 import './Login.css';
 
-export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
@@ -39,15 +39,17 @@ export default function Login() {
       })
       .then((data) => {
         setToken(data.token);
-        console.log(data.token)
         navigate('/Hall');
       })
       .catch((error) => {
       });
   };
+
   return (
     <section className='sectionForm'>
+
       <h1 className='title'>LOGIN</h1>
+
       <form className='containerForm'>
         <Input
           type='email'
@@ -57,6 +59,7 @@ export default function Login() {
           value={email}
           onChange={e => setEmail(e.target.value)}
         />
+
         <Input
           type='password'
           label='Senha'
@@ -66,18 +69,24 @@ export default function Login() {
           onChange={e => setPassword(e.target.value)}
           autoComplete="on"
         />
+
         <Message
           disable={errorMessage ? false : true}
           message={errorMessage}
         />
+
         <Button
           text="ENTRAR"
           onClick={handleLogin}
         />
       </form>
-      <p className='subtitle'>Não possui uma conta?</p>
-      <LinkToRegister />
+
+      <p className='subtitle'>Não possui uma conta?</p> <LinkToRegister />
+
       <Footer />
+
     </section>
   );
 };
+
+export default Login;
