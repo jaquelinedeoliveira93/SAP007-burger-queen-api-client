@@ -1,9 +1,11 @@
 import './Message.css';
 
-function Message({message}) {
+function Message({ message }) {
   return (
     <div>
-      <p className='errorMessage'>{message}</p>
+      <p className='errorMessage'>
+        {message}
+      </p>
     </div>
   );
 };

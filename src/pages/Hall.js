@@ -1,4 +1,5 @@
-import Navbar from "../components/Navbar/Navbar";
+// import components
+import Navbar from '../components/Navbar/Navbar';
 
 function Hall() {
   return (

@@ -17,7 +17,7 @@ import LinkToLogin from '../components/Links/LinkToLogin';
 import './index.css';
 import './Register.css';
 
-export default function Register() {
+function Register() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -51,8 +51,11 @@ export default function Register() {
 
   return (
     <section className='sectionForm' >
+
       <h1 className='title'>CRIE UMA CONTA</h1>
+
       <form className='containerForm'>
+
         <Input
           type='text'
           label='Nome'
@@ -61,6 +64,7 @@ export default function Register() {
           value={name}
           onChange={e => setName(e.target.value)}
         />
+
         <Input
           type='email'
           label='Email'
@@ -69,6 +73,7 @@ export default function Register() {
           value={email}
           onChange={e => setEmail(e.target.value)}
         />
+
         <Input
           type='password'
           label='Senha'
@@ -78,32 +83,25 @@ export default function Register() {
           onChange={e => setPassword(e.target.value)}
           autoComplete="on"
         />
+
         <Message
           disable={errorMessage ? false : true}
           message={errorMessage}
         />
+
         <Button
           text='ENVIAR'
           onClick={handleSubmit}
         />
+
       </form>
-      <p className='subtitle'>Já possui uma conta?</p>
-      <LinkToLogin />
+
+      <p className='subtitle'>Já possui uma conta?</p> <LinkToLogin />
+
       <Footer />
+
     </section>
   );
 };
 
-/*function Register() {
-  return (
-    <section className='sectionForm' >
-      <h1 className='title'>CRIE UMA CONTA</h1>
-      <Form />
-      <p className='subtitle'>Já possui uma conta?</p>
-      <LinkToLogin />
-      <Footer />
-    </section>
-  );
-}
-
-*/
+export default Register;
