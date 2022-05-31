@@ -17,7 +17,7 @@ import LinkToRegister from '../components/Links/LinkToRegister';
 import './index.css';
 import './Login.css';
 
-function Login() {
+export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -81,5 +81,3 @@ function Login() {
     </section>
   );
 };
-
-export default Login;
