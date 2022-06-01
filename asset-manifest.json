@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/SAP007-burger-queen-api-client/static/css/main.80854b75.css",
+    "main.js": "/SAP007-burger-queen-api-client/static/js/main.18e333cb.js",
+    "static/media/background.jpeg": "/SAP007-burger-queen-api-client/static/media/background.08a451d15482c6a6fc1b.jpeg",
+    "index.html": "/SAP007-burger-queen-api-client/index.html",
+    "main.80854b75.css.map": "/SAP007-burger-queen-api-client/static/css/main.80854b75.css.map",
+    "main.18e333cb.js.map": "/SAP007-burger-queen-api-client/static/js/main.18e333cb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.80854b75.css",
+    "static/js/main.18e333cb.js"
+  ]
+}
