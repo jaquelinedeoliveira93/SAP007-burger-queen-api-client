@@ -46,46 +46,48 @@ function Login() {
   };
 
   return (
-    <section className='sectionForm'>
+    <div className='backgroundImg'>
+      <section className='sectionForm'>
 
-      <h1 className='title'>LOGIN</h1>
+        <h1 className='title'>LOGIN</h1>
 
-      <form className='containerForm'>
-        <Input
-          type='email'
-          label='Email'
-          name='email'
-          placeholder='Digite seu email'
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-        />
+        <form className='containerForm'>
+          <Input
+            type='email'
+            label='Email'
+            name='email'
+            placeholder='Digite seu email'
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+          />
 
-        <Input
-          type='password'
-          label='Senha'
-          name='password'
-          placeholder='Digite sua senha'
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          autoComplete="on"
-        />
+          <Input
+            type='password'
+            label='Senha'
+            name='password'
+            placeholder='Digite sua senha'
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            autoComplete="on"
+          />
 
-        <Message
-          disable={errorMessage ? false : true}
-          message={errorMessage}
-        />
+          <Message
+            disable={errorMessage ? false : true}
+            message={errorMessage}
+          />
 
-        <Button
-          text="ENTRAR"
-          onClick={handleLogin}
-        />
-      </form>
+          <Button
+            text="ENTRAR"
+            onClick={handleLogin}
+          />
+        </form>
 
-      <p className='subtitle'>Não possui uma conta?</p> <LinkToRegister />
+        <p className='subtitle'>Não possui uma conta?</p> <LinkToRegister />
 
-      <Footer />
+        <Footer />
 
-    </section>
+      </section>
+    </div>
   );
 };
 

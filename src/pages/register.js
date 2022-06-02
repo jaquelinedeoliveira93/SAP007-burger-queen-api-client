@@ -50,57 +50,59 @@ function Register() {
   };
 
   return (
-    <section className='sectionForm' >
+    <div className='backgroundImg'>
+      <section className='sectionForm' >
 
-      <h1 className='title'>CRIE UMA CONTA</h1>
+        <h1 className='title'>CRIE UMA CONTA</h1>
 
-      <form className='containerForm'>
+        <form className='containerForm'>
 
-        <Input
-          type='text'
-          label='Nome'
-          name='name'
-          placeholder='Digite seu nome completo'
-          value={name}
-          onChange={e => setName(e.target.value)}
-        />
+          <Input
+            type='text'
+            label='Nome'
+            name='name'
+            placeholder='Digite seu nome completo'
+            value={name}
+            onChange={e => setName(e.target.value)}
+          />
 
-        <Input
-          type='email'
-          label='Email'
-          name='email'
-          placeholder='Digite um email válido'
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-        />
+          <Input
+            type='email'
+            label='Email'
+            name='email'
+            placeholder='Digite um email válido'
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+          />
 
-        <Input
-          type='password'
-          label='Senha'
-          name='password'
-          placeholder='Senha com no mínimo seis caracteres'
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          autoComplete="on"
-        />
+          <Input
+            type='password'
+            label='Senha'
+            name='password'
+            placeholder='Senha com no mínimo seis caracteres'
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            autoComplete="on"
+          />
 
-        <Message
-          disable={errorMessage ? false : true}
-          message={errorMessage}
-        />
+          <Message
+            disable={errorMessage ? false : true}
+            message={errorMessage}
+          />
 
-        <Button
-          text='ENVIAR'
-          onClick={handleSubmit}
-        />
+          <Button
+            text='ENVIAR'
+            onClick={handleSubmit}
+          />
 
-      </form>
+        </form>
 
-      <p className='subtitle'>Já possui uma conta?</p> <LinkToLogin />
+        <p className='subtitle'>Já possui uma conta?</p> <LinkToLogin />
 
-      <Footer />
+        <Footer />
 
-    </section>
+      </section>
+    </div>
   );
 };
 
