@@ -62,18 +62,18 @@ function Hall() {
           <button onClick={handleMenu} value='drinks' className='buttonMenu'>
             BEBIBAS
           </button>
-          <button className='buttonMenu'>
+          <button onClick={handleMenu} value='complement' className='buttonMenu'>
             ADICIONAIS
           </button>
         </section>
 
-        <section className="show-menu">
-          <article className="card-products-container">
-            <ul className="card-products">
+        <section className='show-menu'>
+          <article className='card-products-container'>
+            <ul className='card-products'>
               {products.map((product) => {
                 return (
                   <li
-                    className="card-container"
+                    className='cardContainer'
                     key={`products-${product.id}`}
                   >
                     <Card
