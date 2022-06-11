@@ -3,13 +3,13 @@
 
 ## Índice
 
-- [Descrição](#Descrição)
-- [Definição de Produto](#Definição-do-Produto)
-- [Layout](#Layout)
-- [Tecnologias Utilizadas](#Tecnologias-Utilizadas)
-- [Informações Gerais](#Informações-Gerais)
+- [Descrição](#1-Descrição)
+- [Definição de Produto](#2-definição-de-produto)
+- [Layout](#3-Layout)
+- [Tecnologias Utilizadas](#4-Tecnologias-Utilizadas)
+- [Informações Gerais](#5-Informações-Gerais)
 
-## Descrição
+## 1. Descrição
 Interface desenvolvida para um restaurante fictício onde é possível o cadastro e login do funcionário, anotar pedidos e envia-los diretamente para a cozinha, tudo isso através de um tablet.
 
 Informações do cliente:
@@ -25,7 +25,7 @@ Informações do cliente:
 > frango ou vegetariano. Além disso, por um adicional de R\$ 1,00 , eles podem
 > adicionar queijo **ou** ovo.
 
-## Definição de Produto
+## 2. Definição de Produto
 #### [História de usuário 1] Garçom/Garçonete deve poder entrar no sistema
 
 Eu, como garçom/garçonete quero entrar no sistema de pedidos.
@@ -119,10 +119,10 @@ rapidamente aos clientes.
 * Os dados devem ser mantidos intactos, mesmo depois que um pedido for
   finalizado. Tudo isso para poder ter estatísticas no futuro.
 
-## Layout
+## 3. Layout
 As cores escolhidas para esse projeto foram determinadas com base em uma foto relacionada ao tema do projeto. Após teste de usabilidade este foi o resultado:
 
-## Tecnologias utilizadas
+## 4. Tecnologias utilizadas
 - React
 - JavaScrip
 - API
