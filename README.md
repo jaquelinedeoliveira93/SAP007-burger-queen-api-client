@@ -3,14 +3,15 @@
 
 ## Índice
 
-- [1. Descrição](#1-Descrição)
+- [1. Descrição](#1-descrição)
 - [2. Definição de Produto](#2-definição-de-produto)
-- [3. Layout](#3-Layout)
-- [4. Tecnologias Utilizadas](#4-Tecnologias-Utilizadas)
-- [5. Informações Gerais](#5-Informações-Gerais)
+- [3. Layout](#3-layout)
+- [4. Tecnologias Utilizadas](#4-tecnologias-utilizadas)
+- [5. Informações Gerais](#5-informações-gerais)
 
 ## 1. Descrição
-Interface desenvolvida para um restaurante fictício onde é possível o cadastro e login do funcionário, anotar pedidos e envia-los diretamente para a cozinha, tudo isso através de um tablet.
+Interface desenvolvida para um restaurante fictício onde é possível o cadastro e login do funcionário, anotar pedidos e envia-los diretamente para a cozinha, tudo isso através de um tablet. Você pode acessar a aplicação [aqui]() utilizando a seguinte credencial:
+email: jaque@teste.com e senha: 123456
 
 Informações do cliente:
 > Somos **Burger Queen**, um fast food 24hrs.
@@ -130,3 +131,7 @@ As cores escolhidas para esse projeto foram determinadas com base em uma foto re
 - Node.js
 - Git
 
+## 5. Informações Gerais
+- Planejamento do projeto: [Trello](https://trello.com/b/T2odPJNl/projeto-burguer-queen-api-client)
+- Protótipo do projeto: [Figma](https://www.figma.com/file/5QCy797NDEBQXnQmebx6VT/Burguer-Queen-(API-Client)-(Copy))
+- Projeto desenvolvido por [Jaqueline de Oliveira](https://github.com/jaquelinedeoliveira93) 
