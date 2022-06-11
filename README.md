@@ -3,11 +3,11 @@
 
 ## Índice
 
-- [Descrição](#1-Descrição)
-- [Definição de Produto](#2-definição-de-produto)
-- [Layout](#3-Layout)
-- [Tecnologias Utilizadas](#4-Tecnologias-Utilizadas)
-- [Informações Gerais](#5-Informações-Gerais)
+- [1. Descrição](#1-Descrição)
+- [2. Definição de Produto](#2-definição-de-produto)
+- [3. Layout](#3-Layout)
+- [4. Tecnologias Utilizadas](#4-Tecnologias-Utilizadas)
+- [5. Informações Gerais](#5-Informações-Gerais)
 
 ## 1. Descrição
 Interface desenvolvida para um restaurante fictício onde é possível o cadastro e login do funcionário, anotar pedidos e envia-los diretamente para a cozinha, tudo isso através de um tablet.
