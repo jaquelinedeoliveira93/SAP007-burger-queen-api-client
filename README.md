@@ -12,9 +12,7 @@
 ## 1. Descrição
 Interface desenvolvida para um restaurante fictício onde é possível o cadastro e login do funcionário, anotar pedidos e envia-los diretamente para a cozinha, tudo isso através de um tablet. Você pode acessar a aplicação [aqui]() utilizando a seguinte credencial:
 
-email: jaque@teste.com
-
-senha: 123456
+email: jaque@teste.com e senha: 123456
 
 Informações do cliente:
 > Somos **Burger Queen**, um fast food 24hrs.
