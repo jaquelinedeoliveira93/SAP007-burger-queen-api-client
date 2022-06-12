@@ -42,3 +42,29 @@ export const getProducts = () => {
 export const dataFilter = (data, type) => {
   return data.filter((element) => element.sub_type === type)
 }
+
+// enviar o pedido para a comanda
+export const sendOrder = (client, table, products) => {
+  return fetch('https://lab-api-bq.herokuapp.com/orders',{
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': getToken()
+    },
+    body: JSON.stringify({
+      client: client,
+      table: table,
+      products: products,  
+    })
+  });
+};
+
+export const deleteProduct = (productId) => {
+  return fetch('https://lab-api-bq.herokuapp.com/products/{productId}', {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": getToken(),
+    },
+  });
+};

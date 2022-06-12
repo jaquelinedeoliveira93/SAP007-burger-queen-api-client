@@ -1,0 +1,14 @@
+.buttonRemoveAndAdd {
+  background-color: azure;
+  width: 37px;
+  height: 25px;
+}
+
+.listOrderItem {
+  list-style: none;
+}
+
+.plusIcon {
+  width: 10px;
+  height: 10px;
+}

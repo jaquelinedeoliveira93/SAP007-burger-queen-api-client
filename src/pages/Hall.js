@@ -1,5 +1,9 @@
 import { useEffect, useState } from 'react';
-import { getProducts, dataFilter } from '../services/API';
+import {
+  getProducts,
+  dataFilter,
+  sendOrder
+} from '../services/API';
 
 import './index.css';
 import './Hall.css';
@@ -10,9 +14,14 @@ import Button from '../components/Button/Button';
 import Input from '../components/Form/Input';
 import { Card } from '../components/Card/Card';
 import Message from '../components/Message/Message';
+import OrderItem from '../components/OrderItem/OrderItem';
 
 function Hall() {
   const [products, setProducts] = useState([]);
+  const [order, setOrder] = useState([]);
+  const [table, setTable] = useState("");
+  const [client, setClient] = useState("");
+  const [total, setTotal] = useState(0);
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleFilter = (option) => {
@@ -21,8 +30,8 @@ function Hall() {
         switch (response.status) {
           case 200:
             return response.json();
-          case 400:
-            setErrorMessage('Preencha todos os campos');
+          case 401:
+            setErrorMessage('Usuário não autenticado');
             break;
           default:
             setErrorMessage('Algo deu errado, tente novamente')
@@ -39,9 +48,68 @@ function Hall() {
     handleFilter(e.target.value);
   };
 
+  const handleAddProductOnCommand = (product) => {
+    let newOrder = [...order];
+
+    const productOnCommand = newOrder.find((item) => item.id === product.id);
+
+    if (productOnCommand) {
+      productOnCommand.qtd += 1;
+    } else {
+      const newProduct = {
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        qtd: 1,
+      };
+      newOrder.push(newProduct);
+    }
+    setOrder(newOrder);
+  };
+
+  const handleRemoveProductOnCommand = (product) => {
+    let newOrder = [...order];
+
+    const productOnCommand = newOrder.find((item) => item.id === product.id);
+
+    if (productOnCommand.qtd > 1) {
+      productOnCommand.qtd -= 1;
+    } else {
+      newOrder = newOrder.filter((item) => item.id !== product.id);
+    }
+    setOrder(newOrder);
+  };
+
+  const handleSendOrder = (e) => {
+    sendOrder(client, table, order)
+      .then((response) => {
+        switch (response.status) {
+          case 200:
+            return response.json();
+          case 401:
+            setErrorMessage('Usuário não autenticado');
+            break;
+          default:
+            setErrorMessage('Algo deu errado, tente novamente')
+        }
+      })
+      .then(() => {
+        setOrder([]);
+        setTable("");
+        setClient("");
+      });
+  };
+
   useEffect(() => {
     handleFilter("breakfast");
   }, []);
+
+  useEffect(() => {
+    const sum = order.reduce((previousValue, product) => {
+      return previousValue + product.qtd * product.price;
+    }, 0);
+    setTotal(sum);
+  }, [order]);
 
   return (
     <div>
@@ -68,8 +136,8 @@ function Hall() {
         </section>
 
         <section className='show-menu'>
-          <article className='card-products-container'>
-            <ul className='card-products'>
+          <article className='productsContainer'>
+            <ul className='cardProduct'>
               {products.map((product) => {
                 return (
                   <li
@@ -81,6 +149,7 @@ function Hall() {
                       image={product.image}
                       price={product.price}
                       flavor={product.flavor}
+                      onClick={() => handleAddProductOnCommand(product)}
                     />
                   </li>
                 );
@@ -93,7 +162,7 @@ function Hall() {
           <div className='backgroundTitleOrders'>
             <p className='titleOrders'>PEDIDOS</p>
           </div>
-          <div className='clientAndTable'>
+          <section className='clientAndTable'>
             <Input
               className='inputCliente'
               type='text'
@@ -107,15 +176,35 @@ function Hall() {
               label='Mesa:'
               name='table'
             />
-          </div>
-          <div className='totalAndButton'>
-            <p className='valueOrder'>TOTAL:</p>
-
+          </section>
+          <section className='containerOrderItem'>
+            <ul className='ulOrderItem'>
+              {order.map((product) => {
+                return (
+                  <li
+                    className='liOrderItem'
+                    key={`products-order-${product.id}`}
+                  >
+                    <OrderItem
+                    quantity={product.quantity}
+                    name={product.name}
+                    price={product.price * product.quantity}
+                    onclick={() => handleAddProductOnCommand(product)}
+                    onClick={() => handleRemoveProductOnCommand(product)}
+                    />
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+          <section className='totalAndButton'>
+            <p className='valueOrder'>TOTAL: R${total}</p>
             <Button
               className='confirmButton'
               text='CONFIRMAR'
+              onClick={handleSendOrder}
             />
-          </div>
+          </section>
 
           <Message
             disable={errorMessage ? false : true}

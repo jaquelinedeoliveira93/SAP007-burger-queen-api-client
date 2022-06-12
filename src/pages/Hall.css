@@ -1,14 +1,15 @@
 .orderPad {
   background-color: #F3E3C5;
-  width: 463px;
+  width: 423px;
   height: 508px;
   float: right;
   margin-right: 20px;
+  margin-top: 24px;
 }
 
 .backgroundTitleOrders {
   background-color: #FC6C55;
-  width: 463px;
+  width: 423px;
   height: 40px;
   position: absolute;
 }
@@ -39,7 +40,7 @@
 }
 
 .inputCliente {
-  width: 205px;
+  width: 177px;
 }
 
 .inputTable {
@@ -94,4 +95,18 @@
 
 .cardContainer {
   list-style: none;
+  display: inline-block;
+}
+
+.cardProduct {
+  margin-right: 35px;
+  position: absolute;
+}
+
+.liOrderItem {
+  list-style: none;
+}
+
+.ulOrderItem {
+  padding: 0;
 }
