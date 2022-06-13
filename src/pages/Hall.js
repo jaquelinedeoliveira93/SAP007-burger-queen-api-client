@@ -19,8 +19,8 @@ import OrderItem from '../components/OrderItem/OrderItem';
 function Hall() {
   const [products, setProducts] = useState([]);
   const [order, setOrder] = useState([]);
-  const [table, setTable] = useState("");
-  const [client, setClient] = useState("");
+  const [table, setTable] = useState('');
+  const [client, setClient] = useState('');
   const [total, setTotal] = useState(0);
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -95,14 +95,15 @@ function Hall() {
       })
       .then(() => {
         setOrder([]);
-        setTable("");
-        setClient("");
+        setTable('');
+        setClient('');
       });
   };
 
   useEffect(() => {
-    handleFilter("breakfast");
+    handleFilter('breakfast');
   }, []);
+
 
   useEffect(() => {
     const sum = order.reduce((previousValue, product) => {
@@ -135,7 +136,7 @@ function Hall() {
           </button>
         </section>
 
-        <section className='show-menu'>
+        <section className='menuProduct'>
           <article className='productsContainer'>
             <ul className='cardProduct'>
               {products.map((product) => {
@@ -168,6 +169,8 @@ function Hall() {
               type='text'
               label='Nome:'
               name='name'
+              value={client}
+              OnChange={(e) => setClient(e.target.value)}
             />
 
             <Input
@@ -175,8 +178,11 @@ function Hall() {
               type='number'
               label='Mesa:'
               name='table'
+              value={table}
+              OnChange={(e) => setTable(e.target.value)}
             />
           </section>
+          
           <section className='containerOrderItem'>
             <ul className='ulOrderItem'>
               {order.map((product) => {
@@ -186,9 +192,9 @@ function Hall() {
                     key={`products-order-${product.id}`}
                   >
                     <OrderItem
-                    quantity={product.quantity}
                     name={product.name}
-                    price={product.price * product.quantity}
+                    qtd={product.qtd}
+                    price={product.price}
                     onclick={() => handleAddProductOnCommand(product)}
                     onClick={() => handleRemoveProductOnCommand(product)}
                     />
@@ -197,6 +203,7 @@ function Hall() {
               })}
             </ul>
           </section>
+
           <section className='totalAndButton'>
             <p className='valueOrder'>TOTAL: R${total}</p>
             <Button

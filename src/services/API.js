@@ -45,8 +45,8 @@ export const dataFilter = (data, type) => {
 
 // enviar o pedido para a comanda
 export const sendOrder = (client, table, products) => {
-  return fetch('https://lab-api-bq.herokuapp.com/orders',{
-    method: "POST",
+  return fetch('https://lab-api-bq.herokuapp.com/orders', {
+    method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'Authorization': getToken()
@@ -59,12 +59,3 @@ export const sendOrder = (client, table, products) => {
   });
 };
 
-export const deleteProduct = (productId) => {
-  return fetch('https://lab-api-bq.herokuapp.com/products/{productId}', {
-    method: "DELETE",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": getToken(),
-    },
-  });
-};

@@ -1,15 +1,15 @@
 import './OrderItem.css';
-import Button from "../Button/Button";
 import plus from '../../img/plus.png';
+import minus from '../../img/minus.png';
 
-function OrderItem({ name, price, quantity, onclick, onClick }) {
+/*function OrderItem({ name, price, qtd, onclick, onClick }) {
   return (
     <ul>
       <li className='listOrderItem'>
-        <p>{quantity}</p>
+        <p>{name}</p>
       </li>
       <li className='listOrderItem'>
-        <p>{name}</p>
+        <p>R$ {price}</p>
       </li>
       <li className='listOrderItem'>
         <Button className='buttonRemoveAndAdd' onClick={onclick}>
@@ -17,12 +17,28 @@ function OrderItem({ name, price, quantity, onclick, onClick }) {
         </Button>
       </li>
       <li className='listOrderItem'>
-        <p>R$ {price}</p>
+        <p>{qtd}</p>
       </li>
       <li className='listOrderItem'>
         <Button className='buttonRemoveAndAdd' onClick={onClick} operator='-' />
       </li>
     </ul>
+  );
+};*/
+
+function OrderItem({ name, price, qtd, onclick, onClick }) {
+  return (
+    <section>
+      <article>
+        <p className='orderDetails'>{name}</p>
+        <p className='orderDetails'>R$ {price}</p>
+        <div className='counter'>
+          <input type='image' src={plus} alt='icone com sinal de mais' className='buttonRemoveAndAdd' onClick={onclick} />
+          <p className='inputCounter'>{qtd}</p>
+          <input type='image' src={minus} alt='icone com sinal de menos' className='buttonRemoveAndAdd' onClick={onClick} operator='-' />
+        </div>
+      </article>
+    </section>
   );
 };
 
