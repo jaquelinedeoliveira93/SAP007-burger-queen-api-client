@@ -1,6 +1,6 @@
 import './Card.css';
 
-export const Card = ({ name, price, flavor, complement, image, onClick }) => {
+function Card({ name, price, flavor, complement, image, onClick }) {
   return (
     <section className='row'>
       <article className='card'>
@@ -11,8 +11,12 @@ export const Card = ({ name, price, flavor, complement, image, onClick }) => {
         ) : (
           ''
         )}
+        {complement != null ? (
+          <p className='detailProduct'> Adicional: {complement}</p>
+        ) : (
+          ""
+        )}
         <p className='detailProduct'>Preço: R${price}</p>
-        <p className='detailProduct'>{complement}</p>
         <button className='buttonAddProduct' onClick={onClick}>
           Adicionar
         </button>
@@ -21,3 +25,4 @@ export const Card = ({ name, price, flavor, complement, image, onClick }) => {
   );
 };
 
+export default Card

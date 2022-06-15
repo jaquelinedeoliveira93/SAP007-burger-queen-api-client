@@ -12,7 +12,7 @@ import './Hall.css';
 import Navbar from '../components/Navbar/Navbar';
 import Button from '../components/Button/Button';
 import Input from '../components/Form/Input';
-import { Card } from '../components/Card/Card';
+import Card from '../components/Card/Card';
 import Message from '../components/Message/Message';
 import OrderItem from '../components/OrderItem/OrderItem';
 
@@ -148,6 +148,7 @@ function Hall() {
                       image={product.image}
                       price={product.price}
                       flavor={product.flavor}
+                      complement={product.complement}
                       onClick={() => handleAddProductOnCommand(product)}
                     />
                   </li>
