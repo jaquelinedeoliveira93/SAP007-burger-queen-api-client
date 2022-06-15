@@ -85,6 +85,7 @@ function Hall() {
       .then((response) => {
         switch (response.status) {
           case 200:
+            console.log('pedido enviado')
             return response.json();
           case 401:
             setErrorMessage('Usuário não autenticado');
@@ -130,9 +131,6 @@ function Hall() {
           </button>
           <button onClick={handleMenu} value='drinks' className='buttonMenu'>
             BEBIBAS
-          </button>
-          <button onClick={handleMenu} value='complement' className='buttonMenu'>
-            ADICIONAIS
           </button>
         </section>
 
@@ -182,7 +180,7 @@ function Hall() {
               OnChange={(e) => setTable(e.target.value)}
             />
           </section>
-          
+
           <section className='containerOrderItem'>
             <ul className='ulOrderItem'>
               {order.map((product) => {
@@ -192,11 +190,11 @@ function Hall() {
                     key={`products-order-${product.id}`}
                   >
                     <OrderItem
-                    name={product.name}
-                    qtd={product.qtd}
-                    price={product.price}
-                    onclick={() => handleAddProductOnCommand(product)}
-                    onClick={() => handleRemoveProductOnCommand(product)}
+                      name={product.name}
+                      qtd={product.qtd}
+                      price={product.price}
+                      onclick={() => handleAddProductOnCommand(product)}
+                      onClick={() => handleRemoveProductOnCommand(product)}
                     />
                   </li>
                 );

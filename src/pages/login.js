@@ -68,7 +68,7 @@ function Login() {
             placeholder='Digite sua senha'
             value={password}
             onChange={e => setPassword(e.target.value)}
-            autoComplete="on"
+            autoComplete='on'
           />
 
           <Message
@@ -77,7 +77,8 @@ function Login() {
           />
 
           <Button
-            text="ENTRAR"
+            className='buttonSubmit'
+            text='ENTRAR'
             onClick={handleLogin}
           />
         </form>

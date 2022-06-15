@@ -1,12 +1,12 @@
 import './Button.css';
 
-function Button({ text, onClick, ...props }) {
+function Button({ text, className, onClick }) {
   return (
     <div>
       <button
-        className='buttonSubmit'
+        className={className}
         onClick={onClick}
-        {...props}>
+      >
         {text}
       </button>
     </div>

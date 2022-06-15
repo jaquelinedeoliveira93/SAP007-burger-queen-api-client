@@ -10,7 +10,15 @@
   margin-top: 7px;
 }
 
-.buttonSubmit:hover {
-  background-color: #012842;
-  color: #F29F05;
+.confirmButton {
+  width: 120px;
+  height: 35px;
+  background-color: #011E33;
+  color: #FDAC3D;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: .1rem;
+  padding: 10px 4px;
 }

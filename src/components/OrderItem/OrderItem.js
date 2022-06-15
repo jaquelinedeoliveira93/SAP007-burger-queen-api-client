@@ -2,30 +2,6 @@ import './OrderItem.css';
 import plus from '../../img/plus.png';
 import minus from '../../img/minus.png';
 
-/*function OrderItem({ name, price, qtd, onclick, onClick }) {
-  return (
-    <ul>
-      <li className='listOrderItem'>
-        <p>{name}</p>
-      </li>
-      <li className='listOrderItem'>
-        <p>R$ {price}</p>
-      </li>
-      <li className='listOrderItem'>
-        <Button className='buttonRemoveAndAdd' onClick={onclick}>
-          <img className='plusIcon' src={plus} alt='icone com sinal de mais' />
-        </Button>
-      </li>
-      <li className='listOrderItem'>
-        <p>{qtd}</p>
-      </li>
-      <li className='listOrderItem'>
-        <Button className='buttonRemoveAndAdd' onClick={onClick} operator='-' />
-      </li>
-    </ul>
-  );
-};*/
-
 function OrderItem({ name, price, qtd, onclick, onClick }) {
   return (
     <section>
