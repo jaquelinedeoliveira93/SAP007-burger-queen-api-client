@@ -91,6 +91,7 @@ function Register() {
           />
 
           <Button
+            className='buttonSubmit'
             text='ENVIAR'
             onClick={handleSubmit}
           />

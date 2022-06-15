@@ -1,14 +1,15 @@
 .orderPad {
   background-color: #F3E3C5;
-  width: 463px;
-  height: 508px;
+  width: 423px;
+  max-height: 50%;
   float: right;
   margin-right: 20px;
+  margin-top: 24px;
 }
 
 .backgroundTitleOrders {
   background-color: #FC6C55;
-  width: 463px;
+  width: 423px;
   height: 40px;
   position: absolute;
 }
@@ -39,11 +40,30 @@
 }
 
 .inputCliente {
-  width: 205px;
+  width: 177px;
 }
 
 .inputTable {
   width: 71.37px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 12px;
+}
+
+.buttonMenu {
+  padding: .4em .6em;
+  background-color: #023859;
+  color: #FDAC3D;
+  font-weight: bold;
+  width: 168px;
+  height: 47px;
+  border: 0.5px solid #FDAC3D;
+  border-radius: 5px;
+  margin-right: 8px;
+  cursor: pointer;
 }
 
 .totalAndButton {
@@ -52,7 +72,7 @@
   justify-content: space-between;
   margin-left: 13px;
   margin-right: 13px;
-  margin-top: 12px;
+  margin-top: 23px;
 }
 
 .valueOrder {
@@ -60,15 +80,23 @@
   font-size: 16px;
 }
 
-.confirmButton {
-  width: 120px;
-  height: 35px;
-  background-color: #011E33;
-  color: #FDAC3D;
-  border-radius: 5px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  letter-spacing: .1rem;
-  padding: 10px 4px;
+.cardContainer {
+  list-style: none;
+  display: inline-block;
 }
+
+.cardProduct {
+  margin-right: 35px;
+  position: absolute;
+}
+
+.liOrderItem {
+  list-style: none;
+  margin-top: 23px;
+}
+
+.ulOrderItem {
+  padding: 0;
+  margin-top: 26px;
+}
+
