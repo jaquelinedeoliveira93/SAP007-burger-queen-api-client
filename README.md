@@ -1,5 +1,5 @@
-<h1 align="center"> Burger Queen </h1>
-<h4 align="center">Status do projeto: Em construção :construction:</h4>
+<h1 align='center'> Burger Queen </h1>
+<h4 align='center'>Status do projeto: Em construção :construction:</h4>
 
 ## Índice
 
@@ -122,11 +122,27 @@ rapidamente aos clientes.
   finalizado. Tudo isso para poder ter estatísticas no futuro.
 
 ## 3. Layout
-As cores escolhidas para esse projeto foram determinadas com base em uma foto relacionada ao tema do projeto. Após teste de usabilidade este foi o resultado:
+As cores escolhidas para esse projeto foram determinadas com base em uma foto relacionada ao tema do projeto.
+
+<div align='center'>
+  <img src='./src/img/cores.png' alt='foto e paleta de cores aplicada no projeto' width=370px height=200px>
+</div>
+
+Protótipo de alta fidelidade:
+<div align='center'>
+  <img src='./src/img/alta%20fidelidade.png' alt='protótipo da alta fidelidade feito no Figma'>
+</div>
+
+<br>
+Após teste de usabilidade algumas mudanças foram feitas, como por exemplo, acrescentar imagens dos produtos. Este é o resultado até o momento:
+
+<img src='./src/img/Screen%20Register.png' alt='screenshot da página de login'>
+<img src='./src/img/Screen%20Login.png' alt='screenshot da página onde faz o cadastro'>
+<img src='./src/img/Screen%20hall.png' alt='screenshot da página onde faz os pedidos'>
 
 ## 4. Tecnologias utilizadas
 - React
-- JavaScrip
+- JavaScript
 - API
 - CSS3
 - Node.js
@@ -135,4 +151,4 @@ As cores escolhidas para esse projeto foram determinadas com base em uma foto re
 ## 5. Informações Gerais
 - Planejamento do projeto: [Trello](https://trello.com/b/T2odPJNl/projeto-burguer-queen-api-client)
 - Protótipo do projeto: [Figma](https://www.figma.com/file/5QCy797NDEBQXnQmebx6VT/Burguer-Queen-(API-Client)-(Copy))
-- Projeto desenvolvido por [Jaqueline de Oliveira](https://github.com/jaquelinedeoliveira93) 
+- Projeto desenvolvido por Jaqueline de Oliveira - [GitHub](https://github.com/jaquelinedeoliveira93) - [LinkedIn](https://www.linkedin.com/in/jaquelinedeoliveiraa/)
