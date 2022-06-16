@@ -4,7 +4,7 @@ function Card({ name, price, flavor, complement, image, onClick }) {
   return (
     <section className='row'>
       <article className='card'>
-        <img className='img' src={image} alt='ItemCard' />
+        <img className='img' src={image} alt='Imagem do produto' />
         <p className='detailProduct'>{name}</p>
         {flavor != null ? (
           <p className='detailProduct'>Sabor: {flavor}</p>
