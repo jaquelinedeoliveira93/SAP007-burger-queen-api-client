@@ -134,13 +134,12 @@ function Hall() {
           </button>
         </section>
 
-        <section className='menuProduct'>
-          <article className='productsContainer'>
+        <section className='containerCardProduct'>
             <ul className='cardProduct'>
               {products.map((product) => {
                 return (
                   <li
-                    className='cardContainer'
+                    className='detailCard'
                     key={`products-${product.id}`}
                   >
                     <Card
@@ -155,7 +154,6 @@ function Hall() {
                 );
               })}
             </ul>
-          </article>
         </section>
 
         <section className='orderPad'>
@@ -174,7 +172,7 @@ function Hall() {
 
             <Input
               className='inputTable'
-              type='number'
+              type='text'
               label='Mesa:'
               name='table'
               value={table}
