@@ -6,11 +6,11 @@ import {
   Route,
 } from "react-router-dom";
 
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Hall from './pages/Hall';
-import Kitchen from './pages/Kitchen';
-import ReadyOrders from './pages/ReadyOrders';
+import Login from '../src/pages/Login/Login';
+import Register from '../src/pages/Register/Register';
+import Hall from '../src/pages/Hall/Hall';
+import Kitchen from '../src/pages/Kitchen/Kitchen';
+import ReadyOrders from '../src/pages/ReadyOrders/ReadyOrders';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
