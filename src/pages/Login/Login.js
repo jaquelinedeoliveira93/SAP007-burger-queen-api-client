@@ -3,18 +3,18 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 //import functions
-import { setToken } from '../services/localStorege';
-import { loginUser } from '../services/API';
+import { setToken } from '../../services/localStorege';
+import { loginUser } from '../../services/API';
 
 // import components
-import Input from '../components/Form/Input';
-import Footer from '../components/Footer/Footer';
-import Button from '../components/Button/Button';
-import Message from '../components/Message/Message';
-import LinkToRegister from '../components/Links/LinkToRegister';
+import Input from '../../components/Form/Input';
+import Footer from '../../components/Footer/Footer';
+import Button from '../../components/Button/Button';
+import Message from '../../components/Message/Message';
+import LinkToRegister from '../../components/Links/LinkToRegister';
 
 // import styles
-import './index.css';
+import '../index.css';
 import './Login.css';
 
 function Login() {

@@ -3,18 +3,18 @@ import {
   getProducts,
   dataFilter,
   sendOrder
-} from '../services/API';
+} from '../../services/API';
 
-import './index.css';
+import '../index.css';
 import './Hall.css';
 
 // import components
-import Navbar from '../components/Navbar/Navbar';
-import Button from '../components/Button/Button';
-import Input from '../components/Form/Input';
-import Card from '../components/Card/Card';
-import Message from '../components/Message/Message';
-import OrderItem from '../components/OrderItem/OrderItem';
+import Navbar from '../../components/Navbar/Navbar';
+import Button from '../../components/Button/Button';
+import Input from '../../components/Form/Input';
+import Card from '../../components/Card/Card';
+import Message from '../../components/Message/Message';
+import OrderItem from '../../components/OrderItem/OrderItem';
 
 function Hall() {
   const [products, setProducts] = useState([]);
