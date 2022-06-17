@@ -15,8 +15,7 @@ Interface desenvolvida para um restaurante fictício onde é possível o cadastr
 >|email          |senha|
 >|---------------|------|
 >|jaque@teste.com|123456|
-
-email: jaque@teste.com e senha: 123456
+>
 
 Informações do cliente:
 > Somos **Burger Queen**, um fast food 24hrs.
