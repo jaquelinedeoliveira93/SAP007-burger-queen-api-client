@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-//import functions API
+//import functions
 import { setToken } from '../../services/localStorege';
 import { loginUser } from '../../services/API';
 
@@ -92,4 +92,4 @@ function Login() {
   );
 };
 
-export default Login
+export default Login;

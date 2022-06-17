@@ -1,12 +1,12 @@
 .buttonRemoveAndAdd {
-  width: 1.37em;
-  height: 1.37em;
-  padding: 0.31em;
+  width: 22px;
+  height: 22px;
+  padding: 5px;
 }
 
 .orderDetails {
-  padding: 0.37em;
-  font-size: 1.06em;
+  padding: 6px;
+  font-size: 17px;
   display: inline;
 }
 
@@ -14,16 +14,16 @@
   display: flex;
   align-items: center;
   float: right;
-  margin-top: -1.12em;
+  margin-top: -18px;
 }
 
 .inputCounter {
   background-color: #E5E5E5;
-  border: 0.062em solid black;
-  border-radius: 0.31em;
-  width: 2.43em;
-  height: 1.12em;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 39px;
+  height: 18px;
   text-align: center;
   font-weight: bold;
-  padding: 0.25em;
+  padding: 4px;
 }
