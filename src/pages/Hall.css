@@ -37,14 +37,16 @@
   position: relative;
   height: 22px;
   margin-left: 3px;
+  font-size: 15px;
 }
 
 .inputCliente {
-  width: 177px;
+  width: 163px;
 }
 
 .inputTable {
-  width: 71.37px;
+  width: 64px;
+  text-align: center;
 }
 
 .menu {
@@ -80,16 +82,6 @@
   font-size: 16px;
 }
 
-.cardContainer {
-  list-style: none;
-  display: inline-block;
-}
-
-.cardProduct {
-  margin-right: 35px;
-  position: absolute;
-}
-
 .liOrderItem {
   list-style: none;
   margin-top: 23px;
@@ -100,3 +92,24 @@
   margin-top: 26px;
 }
 
+.detailCard {
+  list-style: none;
+}
+
+.cardProduct {
+  display: flex;
+  flex-wrap: wrap;
+  width: 506px;
+  float: left;
+  padding-left: 28px;
+  margin: 23px;
+}
+
+@media screen and (min-width:1200px) {
+  .cardProduct {
+    width: 1180px;
+    padding-left: 37px;
+    margin: 20px;
+    justify-content: center
+  }
+}

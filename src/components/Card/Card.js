@@ -2,7 +2,6 @@ import './Card.css';
 
 function Card({ name, price, flavor, complement, image, onClick }) {
   return (
-    <section className='row'>
       <article className='card'>
         <img className='img' src={image} alt='Imagem do produto' />
         <p className='detailProduct'>{name}</p>
@@ -21,7 +20,6 @@ function Card({ name, price, flavor, complement, image, onClick }) {
           Adicionar
         </button>
       </article>
-    </section>
   );
 };
 
