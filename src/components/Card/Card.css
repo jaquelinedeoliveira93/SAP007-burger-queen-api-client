@@ -1,10 +1,10 @@
 .card {
-  background-color:#F3E3C5;
-  width: 10em;
-  height: 13.4em;
-  border-radius: 0.3em;
-  margin: 0.18em;
-  padding: 0.0625em;
+  background-color: #F3E3C5;
+  width: 160px;
+  height: 214px;
+  border-radius: 5px;
+  margin: 3px;
+  padding: 1px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,25 +12,25 @@
 }
 
 .img {
-  width: 4.37em;
-  height: 4.37em;
+  width: 70px;
+  height: 70px;
 }
 
 .detailProduct {
   color: black;
   font-size: 0.9rem;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  padding: 0.18em;
+  padding: 3px;
   margin: 0;
 }
 
 .buttonAddProduct {
   text-transform: uppercase;
-  padding: 0.37em 0.62em;
-  margin-top: 0.25em;
+  padding: 6px 10px;
+  margin-top: 4px;
   background-color: #023859;
-  border: 0.12em solid #FDAC3D;
+  border: 2px solid #FDAC3D;
   color: #FDAC3D;
   font-weight: bold;
-  border-radius: 0.31em;
+  border-radius: 5px;
 }

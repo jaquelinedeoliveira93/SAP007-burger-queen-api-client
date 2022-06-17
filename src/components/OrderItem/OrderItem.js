@@ -11,7 +11,7 @@ function OrderItem({ name, price, qtd, onclick, onClick }) {
         <div className='counter'>
           <input type='image' src={plus} alt='icone com sinal de mais' className='buttonRemoveAndAdd' onClick={onclick} />
           <p className='inputCounter'>{qtd}</p>
-          <input type='image' src={minus} alt='icone com sinal de menos' className='buttonRemoveAndAdd' onClick={onClick} />
+          <input type='image' src={minus} alt='icone com sinal de menos' className='buttonRemoveAndAdd' onClick={onClick} operator='-' />
         </div>
       </article>
     </section>
