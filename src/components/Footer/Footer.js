@@ -8,7 +8,7 @@ const Footer = () => {
           className='linkFooter'
           href='https://github.com/jaquelinedeoliveira93'
           target='_blank'
-          rel="noreferrer noopener">
+          rel='noreferrer noopener'>
           Jaqueline de Oliveira
         </a>
       </p>

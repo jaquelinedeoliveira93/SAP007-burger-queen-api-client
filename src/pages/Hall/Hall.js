@@ -1,12 +1,8 @@
+// import hooks
 import { useEffect, useState } from 'react';
-import {
-  getProducts,
-  dataFilter,
-  sendOrder
-} from '../../services/API';
 
-import '../index.css';
-import './Hall.css';
+// import functions API
+import { getProducts, dataFilter, sendOrder } from '../../services/API';
 
 // import components
 import Navbar from '../../components/Navbar/Navbar';
@@ -15,6 +11,10 @@ import Input from '../../components/Form/Input';
 import Card from '../../components/Card/Card';
 import Message from '../../components/Message/Message';
 import OrderItem from '../../components/OrderItem/OrderItem';
+
+// import styles
+import '../index.css';
+import './Hall.css';
 
 function Hall() {
   const [products, setProducts] = useState([]);

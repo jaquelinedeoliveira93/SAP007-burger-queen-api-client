@@ -43,7 +43,7 @@ export const dataFilter = (data, type) => {
   return data.filter((element) => element.sub_type === type)
 }
 
-// enviar o pedido para a comanda
+// enviar o pedido
 export const sendOrder = (client, table, products) => {
   return fetch('https://lab-api-bq.herokuapp.com/orders', {
     method: 'POST',

@@ -1,25 +1,24 @@
 .buttonSubmit {
-  width: 369px;
-  height: 40px;
+  width: 23em;
+  height: 2.5em;
   background-color: #FDAC3D;
   color: #550101;
-  border-radius: 10px;
+  border-radius: 0.6em;
   border: none;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 7px;
+  margin-top: 0.4em;
 }
 
 .confirmButton {
-  width: 120px;
-  height: 35px;
+  width: 7.5em;
+  height: 2.2em;
   background-color: #011E33;
   color: #FDAC3D;
-  border-radius: 5px;
+  border-radius: 0.3em;
   border: none;
   font-weight: bold;
   cursor: pointer;
   letter-spacing: .1rem;
-  padding: 10px 4px;
+  padding: 0.6em 0.25em;
 }
-

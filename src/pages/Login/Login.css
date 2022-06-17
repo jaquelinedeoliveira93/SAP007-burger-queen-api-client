@@ -12,12 +12,12 @@
 }
 
 .title {
-  margin-top: 30px;
+  margin-top: 1.87em;
 }
 
 .subtitle {
-  margin-top: 30px;
-  font-size: 13px;
+  margin-top: 1.87em;
+  font-size: 0.81em;
 }
 
 .containerForm {
@@ -29,9 +29,9 @@
 
 .sectionForm {
   background-color: #550101;
-  width: 504px;
-  height: 536px;
-  border-radius: 30px;
+  width: 31.5em;
+  height: 33.5em;
+  border-radius: 1.87em;
   position: absolute;
   top: 50%;
   left: 50%;
