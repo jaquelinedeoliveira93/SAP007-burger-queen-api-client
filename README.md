@@ -12,9 +12,9 @@
 ## 1. Descrição
 Interface desenvolvida para um restaurante fictício onde é possível o cadastro e login do funcionário, anotar pedidos e envia-los diretamente para a cozinha, tudo isso através de um tablet. Você pode acessar a aplicação <a href='https://jaquelinedeoliveira93.github.io/SAP007-burger-queen-api-client/' target=_blank rel='noreferrer noopener'>aqui</a> utilizando a seguinte credencial:
 >
->|email          |senha|
->|---------------|------|
->|jaque@teste.com|123456|
+>|email                   |senha|
+>|------------------------|------|
+>|soberanoburger@teste.com|123456|
 >
 
 Informações do cliente:
