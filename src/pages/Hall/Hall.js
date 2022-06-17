@@ -1,12 +1,8 @@
+// import hooks
 import { useEffect, useState } from 'react';
-import {
-  getProducts,
-  dataFilter,
-  sendOrder
-} from '../../services/API';
 
-import '../index.css';
-import './Hall.css';
+// import functions API
+import { getProducts, dataFilter, sendOrder } from '../../services/API';
 
 // import components
 import Navbar from '../../components/Navbar/Navbar';
@@ -15,6 +11,10 @@ import Input from '../../components/Form/Input';
 import Card from '../../components/Card/Card';
 import Message from '../../components/Message/Message';
 import OrderItem from '../../components/OrderItem/OrderItem';
+
+// styles
+import '../index.css';
+import './Hall.css';
 
 function Hall() {
   const [products, setProducts] = useState([]);
@@ -135,25 +135,25 @@ function Hall() {
         </section>
 
         <section className='containerCardProduct'>
-            <ul className='cardProduct'>
-              {products.map((product) => {
-                return (
-                  <li
-                    className='detailCard'
-                    key={`products-${product.id}`}
-                  >
-                    <Card
-                      name={product.name}
-                      image={product.image}
-                      price={product.price}
-                      flavor={product.flavor}
-                      complement={product.complement}
-                      onClick={() => handleAddProductOnCommand(product)}
-                    />
-                  </li>
-                );
-              })}
-            </ul>
+          <ul className='cardProduct'>
+            {products.map((product) => {
+              return (
+                <li
+                  className='detailCard'
+                  key={`products-${product.id}`}
+                >
+                  <Card
+                    name={product.name}
+                    image={product.image}
+                    price={product.price}
+                    flavor={product.flavor}
+                    complement={product.complement}
+                    onClick={() => handleAddProductOnCommand(product)}
+                  />
+                </li>
+              );
+            })}
+          </ul>
         </section>
 
         <section className='orderPad'>
@@ -219,6 +219,6 @@ function Hall() {
       </main>
     </div >
   );
-}
+};
 
-export default Hall;
+export default Hall

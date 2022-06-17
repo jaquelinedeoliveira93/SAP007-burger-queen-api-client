@@ -1,58 +1,58 @@
 .orderPad {
   background-color: #F3E3C5;
-  width: 423px;
+  width: 26.44em;
   max-height: 50%;
   float: right;
-  margin-right: 20px;
-  margin-top: 24px;
+  margin-right: 1.25em;
+  margin-top: 1.5em;
 }
 
 .backgroundTitleOrders {
   background-color: #FC6C55;
-  width: 423px;
-  height: 40px;
+  width: 26.44em;
+  height: 2.5em;
   position: absolute;
 }
 
 .titleOrders {
   font-weight: bold;
   text-align: center;
-  margin: 10px;
-  font-size: 18px;
+  margin: 0.62em;
+  font-size: 1.12em;
   letter-spacing: .1rem;
 }
 
 .clientAndTable {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 52px;
-  margin-left: -22px;
-  margin-right: -22px;
+  margin-top: 3.25em;
+  margin-left: -1.37em;
+  margin-right: -1.37em;
 }
 
 .inputCliente, .inputTable {
   background-color: #E5E5E5;
-  border: 1px solid black;
-  border-radius: 5px;
+  border: 0.062em solid black;
+  border-radius: 0.31em;
   position: relative;
-  height: 22px;
-  margin-left: 3px;
-  font-size: 15px;
+  height: 1.37em;
+  margin-left: 0.18em;
+  font-size: 0.93em;
 }
 
 .inputCliente {
-  width: 163px;
+  width: 10.18em;
 }
 
 .inputTable {
-  width: 64px;
+  width: 4em;
   text-align: center;
 }
 
 .menu {
   display: flex;
   justify-content: space-evenly;
-  margin: 12px;
+  margin: 0.75em;
 }
 
 .buttonMenu {
@@ -60,11 +60,11 @@
   background-color: #023859;
   color: #FDAC3D;
   font-weight: bold;
-  width: 168px;
-  height: 47px;
-  border: 0.5px solid #FDAC3D;
-  border-radius: 5px;
-  margin-right: 8px;
+  width: 12.5em;
+  height: 3em;
+  border: 0.031em solid #FDAC3D;
+  border-radius: 0.31em;
+  margin-right: 0.5em;
   cursor: pointer;
 }
 
@@ -72,44 +72,43 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 13px;
-  margin-right: 13px;
-  margin-top: 23px;
+  margin-left: 0.81em;
+  margin-right: 0.81em;
+  margin-top: 1.43em;
 }
 
 .valueOrder {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1em;
 }
 
 .liOrderItem {
-  list-style: none;
-  margin-top: 23px;
+  margin-top: 1.43em;
 }
 
 .ulOrderItem {
   padding: 0;
-  margin-top: 26px;
+  margin-top: 1.62em;
 }
 
-.detailCard {
+.detailCard, .liOrderItem {
   list-style: none;
 }
 
 .cardProduct {
   display: flex;
   flex-wrap: wrap;
-  width: 506px;
+  width: 31.62em;
   float: left;
-  padding-left: 28px;
-  margin: 23px;
+  padding-left: 1.75em;
+  margin: 1.43em;
 }
 
 @media screen and (min-width:1200px) {
   .cardProduct {
-    width: 1180px;
-    padding-left: 37px;
-    margin: 20px;
+    width: 73.75em;
+    padding-left: 2.31em;
+    margin: 1.25em;
     justify-content: center
   }
 }

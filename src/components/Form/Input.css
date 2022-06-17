@@ -1,37 +1,22 @@
 .inputForm {
-  width: 369px;
-  height: 40px;
-  border-radius: 10px;
+  width: 23em;
+  height: 2.5em;
+  border-radius: 0.6em;
   border: none;
   background-color: #FDAC3D;
-  margin-top: 10px;
-  margin-bottom: 14px;
+  margin-top: 0.6em;
+  margin-bottom: 0.87em;
   display: block;
 }
 
 .labelForm {
   color: #FDAC3D;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.12em;
 }
 
 input::placeholder {
   color: #550101;
-  font-size: 13px;
-  padding-left: 3px;
-}
-
-.containerRadio {
-  margin-top: 6px;
-}
-
-.selectWorkplace {
-  width: 369px;
-  height: 40px;
-  border-radius: 10px;
-  border: none;
-  background-color: #FDAC3D;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  color: #550101;
+  font-size: 0.81em;
+  padding-left: 0.18em;
 }
