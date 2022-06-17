@@ -31,7 +31,7 @@ Informações do cliente:
 > adicionar queijo **ou** ovo.
 
 ## 2. Definição de Produto
-#### [História de usuário 1] Garçom/Garçonete deve poder entrar no sistema
+#### [História de usuário 1] Garçom/Garçonete deve poder entrar no sistema :white_check_mark:
 
 Eu, como garçom/garçonete quero entrar no sistema de pedidos.
 
@@ -55,7 +55,7 @@ O acordado abaixo deve acontecer para dizer que a história está terminada:
 
 ***
 
-#### [História de usuário 2] Garçom/Garçonete deve ser capaz de anotar o pedido do cliente
+#### [História de usuário 2] Garçom/Garçonete deve ser capaz de anotar o pedido do cliente :white_check_mark:
 
 Eu como garçom/garçonete quero poder anotar o pedido de um cliente para não
 depender da minha memória, saber quanto cobrar e poder enviar os pedidos para a
@@ -83,7 +83,7 @@ O acordado abaixo deve acontecer para dizer que a história está terminada:
 
 ***
 
-#### [História de usuário 3] Chefe de cozinha deve ver os pedidos
+#### [História de usuário 3] Chefe de cozinha deve ver os pedidos :hammer_and_wrench:
 
 Eu como chefe de cozinha quero ver os pedidos dos clientes em ordem, poder
 marcar que estão prontos e poder notificar os garçons/garçonetes que o pedido
@@ -105,7 +105,7 @@ está pronto para ser entregue ao cliente.
 
 ***
 
-#### [História de usuário 4] Garçom/Garçonete deve ver os pedidos prontos para servir
+#### [História de usuário 4] Garçom/Garçonete deve ver os pedidos prontos para servir :hammer_and_wrench:
 
 Eu como garçom/garçonete quero ver os pedidos que estão prontos para entregá-los
 rapidamente aos clientes.
