@@ -39,7 +39,7 @@ export const getProducts = () => {
 };
 
 // filtro menu por tipo
-export const dataFilter = (data, type) => {
+export const menuFilter = (data, type) => {
   return data.filter((element) => element.sub_type === type)
 }
 

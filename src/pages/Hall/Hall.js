@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 
 // import functions API
-import { getProducts, dataFilter, sendOrder } from '../../services/API';
+import { getProducts, menuFilter, sendOrder } from '../../services/API';
 
 // import components
 import Navbar from '../../components/Navbar/Navbar';
@@ -38,7 +38,7 @@ function Hall() {
         }
       })
       .then((data) => {
-        setProducts(dataFilter(data, option))
+        setProducts(menuFilter(data, option))
       })
       .catch((error) => {
       });
@@ -48,21 +48,21 @@ function Hall() {
     handleFilter(e.target.value);
   };
 
-  const handleAddProductOnCommand = (product) => {
+  const handleAddItemOnCommand = (product) => {
     let newOrder = [...order];
 
-    const productOnCommand = newOrder.find((item) => item.id === product.id);
+    const itemOnCommand = newOrder.find((item) => item.id === product.id);
 
-    if (productOnCommand) {
-      productOnCommand.qtd += 1;
+    if (itemOnCommand) {
+      itemOnCommand.qtd += 1;
     } else {
-      const newProduct = {
+      const newItem = {
         id: product.id,
         name: product.name,
         price: product.price,
         qtd: 1,
       };
-      newOrder.push(newProduct);
+      newOrder.push(newItem);
     }
     setOrder(newOrder);
   };
@@ -70,10 +70,10 @@ function Hall() {
   const handleRemoveProductOnCommand = (product) => {
     let newOrder = [...order];
 
-    const productOnCommand = newOrder.find((item) => item.id === product.id);
+    const itemOnCommand = newOrder.find((item) => item.id === product.id);
 
-    if (productOnCommand.qtd > 1) {
-      productOnCommand.qtd -= 1;
+    if (itemOnCommand.qtd > 1) {
+      itemOnCommand.qtd -= 1;
     } else {
       newOrder = newOrder.filter((item) => item.id !== product.id);
     }
@@ -148,7 +148,7 @@ function Hall() {
                       price={product.price}
                       flavor={product.flavor}
                       complement={product.complement}
-                      onClick={() => handleAddProductOnCommand(product)}
+                      onClick={() => handleAddItemOnCommand(product)}
                     />
                   </li>
                 );
@@ -192,7 +192,7 @@ function Hall() {
                       name={product.name}
                       qtd={product.qtd}
                       price={product.price}
-                      onclick={() => handleAddProductOnCommand(product)}
+                      onclick={() => handleAddItemOnCommand(product)}
                       onClick={() => handleRemoveProductOnCommand(product)}
                     />
                   </li>
