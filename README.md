@@ -1,5 +1,5 @@
-<h1 align='center'> Burger Queen </h1>
-<h4 align='center'>Status do projeto: Em construção :construction:</h4>
+<h1 align=center> Burger Queen </h1>
+<h4 align=center>Status do projeto: Em construção :construction:</h4>
 
 ## Índice
 
@@ -10,9 +10,12 @@
 - [5. Informações Gerais](#5-informações-gerais)
 
 ## 1. Descrição
-Interface desenvolvida para um restaurante fictício onde é possível o cadastro e login do funcionário, anotar pedidos e envia-los diretamente para a cozinha, tudo isso através de um tablet. Você pode acessar a aplicação [aqui]() utilizando a seguinte credencial:
-
-email: jaque@teste.com e senha: 123456
+Interface desenvolvida para um restaurante fictício onde é possível o cadastro e login do funcionário, anotar pedidos e envia-los diretamente para a cozinha, tudo isso através de um tablet. Você pode acessar a aplicação <a href='https://jaquelinedeoliveira93.github.io/SAP007-burger-queen-api-client/' target=_blank rel='noreferrer noopener'>aqui</a> utilizando a seguinte credencial:
+>
+>|email                   |senha|
+>|------------------------|------|
+>|soberanoburger@teste.com|123456|
+>
 
 Informações do cliente:
 > Somos **Burger Queen**, um fast food 24hrs.
@@ -28,7 +31,7 @@ Informações do cliente:
 > adicionar queijo **ou** ovo.
 
 ## 2. Definição de Produto
-#### [História de usuário 1] Garçom/Garçonete deve poder entrar no sistema
+#### [História de usuário 1] Garçom/Garçonete deve poder entrar no sistema :white_check_mark:
 
 Eu, como garçom/garçonete quero entrar no sistema de pedidos.
 
@@ -52,7 +55,7 @@ O acordado abaixo deve acontecer para dizer que a história está terminada:
 
 ***
 
-#### [História de usuário 2] Garçom/Garçonete deve ser capaz de anotar o pedido do cliente
+#### [História de usuário 2] Garçom/Garçonete deve ser capaz de anotar o pedido do cliente :white_check_mark:
 
 Eu como garçom/garçonete quero poder anotar o pedido de um cliente para não
 depender da minha memória, saber quanto cobrar e poder enviar os pedidos para a
@@ -80,7 +83,7 @@ O acordado abaixo deve acontecer para dizer que a história está terminada:
 
 ***
 
-#### [História de usuário 3] Chefe de cozinha deve ver os pedidos
+#### [História de usuário 3] Chefe de cozinha deve ver os pedidos :hammer_and_wrench:
 
 Eu como chefe de cozinha quero ver os pedidos dos clientes em ordem, poder
 marcar que estão prontos e poder notificar os garçons/garçonetes que o pedido
@@ -102,7 +105,7 @@ está pronto para ser entregue ao cliente.
 
 ***
 
-#### [História de usuário 4] Garçom/Garçonete deve ver os pedidos prontos para servir
+#### [História de usuário 4] Garçom/Garçonete deve ver os pedidos prontos para servir :hammer_and_wrench:
 
 Eu como garçom/garçonete quero ver os pedidos que estão prontos para entregá-los
 rapidamente aos clientes.
@@ -125,20 +128,24 @@ rapidamente aos clientes.
 As cores escolhidas para esse projeto foram determinadas com base em uma foto relacionada ao tema do projeto.
 
 <div align='center'>
-  <img src='./src/img/cores.png' alt='foto e paleta de cores aplicada no projeto' width=370px height=200px>
+  <img src='./src/img/cores.png' alt='foto e paleta de cores aplicada no projeto' width=546px heigth=281px>
 </div>
 
-Protótipo de alta fidelidade:
-<div align='center'>
-  <img src='./src/img/alta%20fidelidade.png' alt='protótipo da alta fidelidade feito no Figma'>
+<h4 align=center>Protótipo de alta fidelidade</h4>
+<div align=center>
+  <img src='./src/img/alta%20fidelidade.png' alt='protótipo da alta fidelidade feito no Figma' width=540px heigth=367px>
 </div>
 
 <br>
 Após teste de usabilidade algumas mudanças foram feitas, como por exemplo, acrescentar imagens dos produtos. Este é o resultado até o momento:
 
-<img src='./src/img/Screen%20Register.png' alt='screenshot da página de login'>
-<img src='./src/img/Screen%20Login.png' alt='screenshot da página onde faz o cadastro'>
-<img src='./src/img/Screen%20hall.png' alt='screenshot da página onde faz os pedidos'>
+<br><div align=center>
+  <div display=inline>
+    <img src='./src/img/Screen%20Register.png' alt='screenshot da página de login' width=385px heigth=289px>
+    <img src='./src/img/Screen%20Login.png' alt='screenshot da página onde faz o cadastro' width=385px heigth=289px>
+  </div>
+  <img src='./src/img/Screen%20hall.png' alt='screenshot da página onde faz os pedidos' width=385px heigth=289px>
+</div>
 
 ## 4. Tecnologias utilizadas
 - React
