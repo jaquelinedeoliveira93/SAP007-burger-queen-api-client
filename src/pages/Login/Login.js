@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 //import functions API
 import { setToken } from '../../services/localStorege';
 import { loginUser } from '../../services/API';
+import { ErrorLogin } from '../../services/Error';
 
 // import components
 import Input from '../../components/Form/Input';
@@ -27,15 +28,10 @@ function Login() {
     e.preventDefault();
     loginUser(email, password)
       .then((response) => {
-        switch (response.status) {
-          case 200:
-            return response.json();
-          case 400:
-            setErrorMessage('E-mail ou senha inválidos');
-            break;
-          default:
-            setErrorMessage('Algo deu errado, tente novamente')
+        if (response.status === 200) {
+          return response.json();
         }
+        setErrorMessage(ErrorLogin(response));
       })
       .then((data) => {
         setToken(data.token);
