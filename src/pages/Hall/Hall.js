@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 // import functions API
 import { getProducts, menuFilter, sendOrder } from '../../services/API';
+import { ErrorHall } from '../../services/Error';
 
 // import components
 import Navbar from '../../components/Navbar/Navbar';
@@ -27,15 +28,10 @@ function Hall() {
   const handleFilter = (option) => {
     getProducts()
       .then((response) => {
-        switch (response.status) {
-          case 200:
-            return response.json();
-          case 401:
-            setErrorMessage('Usuário não autenticado');
-            break;
-          default:
-            setErrorMessage('Algo deu errado, tente novamente')
+        if (response.status === 200) {
+          return response.json();
         }
+        setErrorMessage(ErrorHall(response));
       })
       .then((data) => {
         setProducts(menuFilter(data, option))
@@ -135,25 +131,25 @@ function Hall() {
         </section>
 
         <section className='containerCardProduct'>
-            <ul className='cardProduct'>
-              {products.map((product) => {
-                return (
-                  <li
-                    className='detailCard'
-                    key={`products-${product.id}`}
-                  >
-                    <Card
-                      name={product.name}
-                      image={product.image}
-                      price={product.price}
-                      flavor={product.flavor}
-                      complement={product.complement}
-                      onClick={() => handleAddItemOnCommand(product)}
-                    />
-                  </li>
-                );
-              })}
-            </ul>
+          <ul className='cardProduct'>
+            {products.map((product) => {
+              return (
+                <li
+                  className='detailCard'
+                  key={`products-${product.id}`}
+                >
+                  <Card
+                    name={product.name}
+                    image={product.image}
+                    price={product.price}
+                    flavor={product.flavor}
+                    complement={product.complement}
+                    onClick={() => handleAddItemOnCommand(product)}
+                  />
+                </li>
+              );
+            })}
+          </ul>
         </section>
 
         <section className='orderPad'>

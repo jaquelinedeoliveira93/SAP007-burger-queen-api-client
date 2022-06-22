@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 // import functions API
 import { createUser } from '../../services/API';
 import { setToken } from '../../services/localStorege';
+import { ErrorRegister } from '../../services/Error';
 
 // import components
 import Input from '../../components/Form/Input';
@@ -28,18 +29,10 @@ function Register() {
     e.preventDefault();
     createUser(name, email, password)
       .then((response) => {
-        switch (response.status) {
-          case 200:
-            return response.json();
-          case 400:
-            setErrorMessage('Preencha todos os campos');
-            break;
-          case 403:
-            setErrorMessage('E-mail já cadastrado');
-            break;
-          default:
-            setErrorMessage('Algo deu errado, tente novamente')
+        if (response.status === 200) {
+          return response.json();
         }
+        setErrorMessage(ErrorRegister(response));
       })
       .then((data) => {
         setToken(data.token);
