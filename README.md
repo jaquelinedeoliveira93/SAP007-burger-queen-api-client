@@ -83,7 +83,7 @@ O acordado abaixo deve acontecer para dizer que a história está terminada:
 
 ***
 
-#### [História de usuário 3] Chefe de cozinha deve ver os pedidos :hammer_and_wrench:
+#### [História de usuário 3] Chefe de cozinha deve ver os pedidos :white_check_mark:
 
 Eu como chefe de cozinha quero ver os pedidos dos clientes em ordem, poder
 marcar que estão prontos e poder notificar os garçons/garçonetes que o pedido
@@ -105,7 +105,7 @@ está pronto para ser entregue ao cliente.
 
 ***
 
-#### [História de usuário 4] Garçom/Garçonete deve ver os pedidos prontos para servir :hammer_and_wrench:
+#### [História de usuário 4] Garçom/Garçonete deve ver os pedidos prontos para servir :white_check_mark:
 
 Eu como garçom/garçonete quero ver os pedidos que estão prontos para entregá-los
 rapidamente aos clientes.
@@ -144,7 +144,10 @@ Após teste de usabilidade algumas mudanças foram feitas, como por exemplo, acr
     <img src='./src/img/Screen%20Register.png' alt='screenshot da página de login' width=385px heigth=289px>
     <img src='./src/img/Screen%20Login.png' alt='screenshot da página onde faz o cadastro' width=385px heigth=289px>
   </div>
-  <img src='./src/img/Screen%20hall.png' alt='screenshot da página onde faz os pedidos' width=385px heigth=289px>
+  <div display=inline>
+    <img src='./src/img/Screen%20hall.png' alt='screenshot da página onde faz os pedidos' width=385px heigth=289px>
+    <img src='./src/img/Screen%20Ready%20Orders.png' alt='screenshot da página os pedidos prontos ficam' width=385px heigth=289px>
+  </div>
 </div>
 
 ## 4. Tecnologias utilizadas
