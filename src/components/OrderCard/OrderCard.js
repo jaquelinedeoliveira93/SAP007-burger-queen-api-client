@@ -23,7 +23,7 @@ function CardOrder({ id, clientName, table, status, orderPreparationTime, produc
                 ''
               )}
               {orderItem.complement !== null ? (
-                <p className='textStyle'>Adicional: {orderItem.complement}</p>
+                <p className='flavor textStyle'>Adicional: {orderItem.complement}</p>
               ) : (
                 ''
               )}

@@ -17,7 +17,7 @@ function ReadyOrderCard({ id, clientName, table, status, createdAt, products, on
                 ''
               )}
               {orderItem.complement !== null ? (
-                <p className='textStyle'>Adicional: {orderItem.complement}</p>
+                <p className='flavor textStyle'>Adicional: {orderItem.complement}</p>
               ) : (
                 ''
               )}
