@@ -84,6 +84,10 @@ export const orderFilter = (data, type) => {
   return data.filter((element) => element.status !== type);
 };
 
+export const orderReadyFilter = (data, type) => {
+  return data.filter((element) => element.status === type);
+};
+
 // TEMPO DE PREPARAÇÃO DO PEDIDO
 export const orderDate = (parameter) => {
   const date = new Date(parameter);

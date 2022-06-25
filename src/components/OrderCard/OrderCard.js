@@ -1,7 +1,7 @@
 import Button from '../Button/Button';
 import './OrderCard.css';
 
-function CardOrder({ id, clientName, table, status, createdAt, orderPreparationTime, products, onClick }) {
+function CardOrder({ id, clientName, table, status, orderPreparationTime, products, onClick }) {
   return (
     <article className='cardKitchen'>
       <p className='textStyle'>Cliente: {clientName} Mesa: {table}</p>
