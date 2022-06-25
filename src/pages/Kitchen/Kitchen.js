@@ -6,7 +6,7 @@ import {
   getOrders,
   orderFilter,
   orderDate,
-  orderTime,
+  orderPreparationTime,
   updateOrderStatus
 } from '../../services/API';
 
@@ -16,22 +16,22 @@ import OrderCard from '../../components/OrderCard/OrderCard';
 
 //import styles
 import './Kitchen.css';
-import './index.css';
+import '../index.css';
 
 function Kitchen() {
   const [order, setOrder] = useState([]);
 
-  function Order() {
-    getOrders()
-      .then((response) => response.json())
-      .then((data) => {
-        const orderDone = orderFilter(data, 'done');
-        const serveOrder = orderFilter(orderDone, 'serve');
-
-        setOrder(serveOrder);
-      });
-  };
-
+    function Order() {
+      getOrders()
+        .then((response) => response.json())
+        .then((data) => {
+          const orderDone = orderFilter(data, 'done');
+          const serveOrder = orderFilter(orderDone, 'serve');
+  
+          setOrder(serveOrder);
+        });
+    };
+  
   useEffect(() => {
     Order();
   }, []);
@@ -57,11 +57,34 @@ function Kitchen() {
 
   return (
     <section>
-      <Navbar />
-      <h1 className='TitleKitchen'>PEDIDOS EM PREPARO</h1>
+      <header>
+        <Navbar />
+        <h1 className='TitleKitchen'>PEDIDOS EM PREPARO</h1>
+      </header>
       <main>
-        <section className='orderCards'>
-          <OrderCard />
+        <section className='kitchenOrderList'>
+          <ul className='kitchenCards'>
+            {order.map((item) => {
+              return (
+                <li key={`ìtem-${item.id}`}>
+                  <OrderCard
+                    id={item.id}
+                    clientName={item.client_name}
+                    table={item.table}
+                    status={item.status}
+                    createdAt={orderDate(item.createdAt)}
+                    updatedAt={orderDate(item.updatedAt)}
+                    orderPreparationTime={orderPreparationTime(
+                      item.createdAt,
+                      item.processedAt
+                    )}
+                    products={item.Products}
+                    onClick={(e) => handleUpdateOrderStatus(item, e)}
+                  />
+                </li>
+              )
+            })}
+          </ul>
         </section>
       </main>
     </section>

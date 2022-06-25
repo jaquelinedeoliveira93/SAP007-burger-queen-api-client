@@ -1,8 +1,9 @@
-const URL = 'https://lab-api-bq.herokuapp.com';
 import { getToken } from './localStorege';
 import {format, differenceInMinutes, minutesToHours } from 'date-fns';
 
-// cadastrar novo usuário
+const URL = 'https://lab-api-bq.herokuapp.com';
+
+// PEGAR DADOS NA API
 export const createUser = (name, email, password) => {
   return fetch(`${URL}/users`, {
     method: 'POST',
@@ -17,7 +18,6 @@ export const createUser = (name, email, password) => {
   });
 };
 
-// fazer login
 export const loginUser = (email, password) => {
   return fetch(`${URL}/auth`, {
     method: 'POST',
@@ -29,7 +29,6 @@ export const loginUser = (email, password) => {
   });
 };
 
-// pegar os produtos
 export const getProducts = () => {
   return fetch(`${URL}/products`, {
     method: 'GET',
@@ -40,12 +39,6 @@ export const getProducts = () => {
   });
 };
 
-// filtro menu por tipo
-export const menuFilter = (data, type) => {
-  return data.filter((element) => element.sub_type === type)
-}
-
-// enviar o pedido
 export const sendOrder = (client, table, products) => {
   return fetch(`${URL}/orders`, {
     method: 'POST',
@@ -61,7 +54,6 @@ export const sendOrder = (client, table, products) => {
   });
 };
 
-// pegar os pedidos
 export const getOrders = () => {
   return fetch(`${URL}/orders`, {
     method: 'GET',
@@ -70,28 +62,6 @@ export const getOrders = () => {
       'Authorization': getToken('token')
     }
   });
-};
-
-export const orderDate = (parameter) => {
-  const date = new Date(parameter);
-  const showDate = format(date, 'dd.MM.yyyy HH:mm');
-  return showDate;
-};
-
-export const orderTime = (startOrder, endOrder) => {
-  const createAt = new Date(startOrder);
-  const finishingAt = new Date(endOrder);
-
-  const totalPreparationTime = differenceInMinutes(finishingAt, createAt);
-  if (totalPreparationTime < 60) {
-    return `${totalPreparationTime} minutos`;
-  }else{
-    return `${minutesToHours(totalPreparationTime)} horas`;
-  }
-};
-
-export const orderFilter = (data, type) => {
-  return data.filter((element) => element.status != type);
 };
 
 export const updateOrderStatus = (id, status) => {
@@ -103,4 +73,32 @@ export const updateOrderStatus = (id, status) => {
     },
     body: JSON.stringify({status})
   });
+};
+
+// FILTROS
+export const menuFilter = (data, type) => {
+  return data.filter((element) => element.sub_type === type)
+}
+
+export const orderFilter = (data, type) => {
+  return data.filter((element) => element.status !== type);
+};
+
+// TEMPO DE PREPARAÇÃO DO PEDIDO
+export const orderDate = (parameter) => {
+  const date = new Date(parameter);
+  const showDate = format(date, 'dd.MM.yy HH:mm');
+  return showDate;
+};
+
+export const orderPreparationTime = (startOrder, endOrder) => {
+  const createAt = new Date(startOrder);
+  const finishingAt = new Date(endOrder);
+
+  const totalPreparationTime = differenceInMinutes(finishingAt, createAt);
+  if (totalPreparationTime < 60) {
+    return `${totalPreparationTime} minutos`;
+  }else{
+    return `${minutesToHours(totalPreparationTime)} horas`;
+  }
 };
