@@ -1,5 +1,20 @@
-.warning {
+.titleOrder {
   color: white;
   text-align: center;
-  padding: 2em;
+  margin: 4px;
+  padding: 10px;
+}
+
+.listcard {
+  list-style: none;
+}
+
+.readyCards {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  padding-left: 1.75em;
+  margin-left: 15px;
+  align-items: flex-start;
 }
